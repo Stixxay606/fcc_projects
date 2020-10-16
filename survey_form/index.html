@@ -7,181 +7,247 @@
     <title>Survey Form</title>
   </head>
   <body>
-    <header class="header">
-      <h1 class="header__title">Survey Form</h1>
-      <p class="header__text">
-        Thank you for taking the time to help us improve the platform
-      </p>
-    </header>
+    <div class="content-background">
+      <header class="header">
+        <h1 class="header__title">Survey Form</h1>
+        <p class="header__text">
+          Thank you for taking the time to help us improve the platform
+        </p>
+      </header>
 
-    <main class="content">
-      <form class="survey-form">
-        <section class="form__text">
-          <label for="name" class="label">Name</label>
-          <input
-            id="name"
-            class="name__input"
-            name="name"
-            type="text"
-            placeholder="Enter your name"
-            required
-          />
+      <main class="content">
+        <form class="survey-form">
+          <section class="form__text">
+            <label for="name" class="label">Name</label>
+            <input
+              id="name"
+              class="input--long"
+              name="name"
+              type="text"
+              placeholder="Enter your name"
+              required
+            />
 
-          <label for="email" class="label">Email</label>
-          <input
-            id="email"
-            class="email__input"
-            name="email"
-            type="email"
-            placeholder="Enter your email"
-            required
-          />
-        </section>
+            <label for="email" class="label">Email</label>
+            <input
+              id="email"
+              class="input--long"
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              required
+            />
+          </section>
 
-        <section class="form__number">
-          <label for="age" class="label"
-            >Age <span class="optional">(optional)</span></label
-          >
-          <input
-            id="age"
-            class="age__input"
-            name="age"
-            type="number"
-            placeholder="Age"
-            min="10"
-            max="99"
-          />
-        </section>
-
-        <section class="form__select">
-          <label for="role" class="label"
-            >Which option best describes your current role?</label
-          >
-          <select name="role" id="role" class="select">
-            <option
-              class="select__option select__option--disable"
-              selected
-              disabled
+          <section class="form__number">
+            <label for="age" class="label"
+              >Age <span class="optional">(optional)</span></label
             >
-              Select current role
-            </option>
-            <option value="student" class="select__option">Student</option>
-            <option value="job" class="select__option">Full Time Job</option>
-            <option value="learner" class="select__option">
-              Full Time Learner
-            </option>
-            <option value="prefer" class="select__option">
-              Prefer not to say
-            </option>
-            <option value="other" class="select__option">Other</option>
-          </select>
-        </section>
+            <input
+              id="age"
+              class="input--long"
+              name="age"
+              type="number"
+              placeholder="Age"
+              min="10"
+              max="99"
+            />
+          </section>
 
-        <section class="form__radio">
-          <label class="label">Would you recommend us to a friend?</label>
-
-          <label for="definitely" class="label--right">Definitely</label>
-          <input
-            id="definitely"
-            class="radio__btn"
-            name="reccomend"
-            type="radio"
-          />
-
-          <label for="maybe" class="label--right">Maybe</label>
-          <input id="maybe" name="reccomend" class="radio__btn" type="radio" />
-
-          <label for="no" class="label--right">Not sure</label>
-          <input id="no" class="radio__btn" name="reccomend" type="radio" />
-        </section>
-
-        <section class="form__select">
-          <label for="favorite" class="label"
-            >What is your favorite feature from us?</label
-          >
-          <select name="favorite" id="favorite" class="select">
-            <option
-              class="select__option select__option--disable"
-              selected
-              disabled
+          <section class="form__select">
+            <label for="role" class="label"
+              >Which option best describes your current role?</label
             >
-              Select an option
-            </option>
-            <option value="challenge" class="select__option">Challenges</option>
-            <option value="projects" class="select__option">Projects</option>
-            <option value="community" class="select__option">Community</option>
-            <option value="open" class="select__option">Open Source</option>
-          </select>
-        </section>
+            <select name="role" id="role" class="input--long">
+              <option
+                class="select__option select__option--disable"
+                selected
+                disabled
+              >
+                Select current role
+              </option>
+              <option value="student" class="select__option">Student</option>
+              <option value="job" class="select__option">Full Time Job</option>
+              <option value="learner" class="select__option">
+                Full Time Learner
+              </option>
+              <option value="prefer" class="select__option">
+                Prefer not to say
+              </option>
+              <option value="other" class="select__option">Other</option>
+            </select>
+          </section>
 
-        <section class="form__checkbox">
-          <label class="label"
-            >What would you like to see improved?<span class="optional"
-              >(Check all that apply)</span
-            ></label
-          >
+          <section class="form__radio">
+            <label class="label">Would you recommend us to a friend?</label>
 
-          <label for="front-end" class="label--right">Front-end Projects</label>
-          <input
-            type="checkbox"
-            name="front-end"
-            id="front-end"
-            class="checkbox"
-          />
+            <div class="flex-row">
+              <label for="definitely" class="label--right">Definitely</label>
+              <input
+                id="definitely"
+                class="radio__btn"
+                name="reccomend"
+                type="radio"
+              />
+            </div>
 
-          <label for="back-end" class="label--right">Back-end Projects</label>
-          <input
-            type="checkbox"
-            name="back-end"
-            id="back-end"
-            class="checkbox"
-          />
+            <div class="flex-row">
+              <label for="maybe" class="label--right">Maybe</label>
+              <input
+                id="maybe"
+                name="reccomend"
+                class="radio__btn"
+                type="radio"
+              />
+            </div>
 
-          <label for="data" class="label--right">Data Visualization</label>
-          <input type="checkbox" name="data" id="data" class="checkbox" />
+            <div class="flex-row">
+              <label for="no" class="label--right">Not sure</label>
+              <input id="no" class="radio__btn" name="reccomend" type="radio" />
+            </div>
+          </section>
 
-          <label for="challenge" class="label--right">Challenges</label>
-          <input
-            type="checkbox"
-            name="challenge"
-            id="challenge"
-            class="checkbox"
-          />
+          <section class="form__select">
+            <label for="favorite" class="label"
+              >What is your favorite feature from us?</label
+            >
+            <select name="favorite" id="favorite" class="input--long">
+              <option
+                class="select__option select__option--disable"
+                selected
+                disabled
+              >
+                Select an option
+              </option>
+              <option value="challenge" class="select__option">
+                Challenges
+              </option>
+              <option value="projects" class="select__option">Projects</option>
+              <option value="community" class="select__option">
+                Community
+              </option>
+              <option value="open" class="select__option">Open Source</option>
+            </select>
+          </section>
 
-          <label for="open" class="label--right">Open Source Community</label>
-          <input type="checkbox" name="open" id="open" class="checkbox" />
+          <section class="form__checkbox">
+            <div class="flex-row">
+              <label class="label"
+                >What would you like to see improved?<span class="optional"
+                  >(Check all that apply)</span
+                ></label
+              >
+            </div>
 
-          <label for="gitter" class="label--right">Gitter help rooms</label>
-          <input type="checkbox" name="gitter" id="gitter" class="checkbox" />
+            <div class="flex-row">
+              <label for="front-end" class="label--right"
+                >Front-end Projects</label
+              >
+              <input
+                type="checkbox"
+                name="front-end"
+                id="front-end"
+                class="checkbox"
+              />
+            </div>
 
-          <label for="video" class="label--right">Videos</label>
-          <input type="checkbox" name="video" id="video" class="checkbox" />
+            <div class="flex-row">
+              <label for="back-end" class="label--right"
+                >Back-end Projects</label
+              >
+              <input
+                type="checkbox"
+                name="back-end"
+                id="back-end"
+                class="checkbox"
+              />
+            </div>
 
-          <label for="meetups" class="label--right">City Meetups</label>
-          <input type="checkbox" name="meetup" id="meetup" class="checkbox" />
+            <div class="flex-row">
+              <label for="data" class="label--right">Data Visualization</label>
+              <input type="checkbox" name="data" id="data" class="checkbox" />
+            </div>
 
-          <label for="wiki" class="label--right">Wiki</label>
-          <input type="checkbox" name="wiki" id="wiki" class="checkbox" />
+            <div class="flex-row">
+              <label for="challenge" class="label--right">Challenges</label>
+              <input
+                type="checkbox"
+                name="challenge"
+                id="challenge"
+                class="checkbox"
+              />
+            </div>
 
-          <label for="forum" class="label--right">Forum</label>
-          <input type="checkbox" name="forum" id="forum" class="checkbox" />
+            <div class="flex-row">
+              <label for="open" class="label--right"
+                >Open Source Community</label
+              >
+              <input type="checkbox" name="open" id="open" class="checkbox" />
+            </div>
 
-          <label for="courses" class="label--right">Additional Courses</label>
-          <input type="checkbox" name="courses" id="courses" class="courses" />
-        </section>
+            <div class="flex-row">
+              <label for="gitter" class="label--right">Gitter help rooms</label>
+              <input
+                type="checkbox"
+                name="gitter"
+                id="gitter"
+                class="checkbox"
+              />
+            </div>
 
-        <section class="form__textarea">
-          <label for="comments">Any comments or suggestions?</label>
-          <textarea
-            name="comments"
-            id="comments"
-            class="textarea__comment"
-            placeholder="Enter your comment here..."
-          ></textarea>
-        </section>
+            <div class="flex-row">
+              <label for="video" class="label--right">Videos</label>
+              <input type="checkbox" name="video" id="video" class="checkbox" />
+            </div>
 
-        <button class="btn" type="submit">Submit</button>
-      </form>
-    </main>
+            <div class="flex-row">
+              <label for="meetups" class="label--right">City Meetups</label>
+              <input
+                type="checkbox"
+                name="meetup"
+                id="meetup"
+                class="checkbox"
+              />
+            </div>
+
+            <div class="flex-row">
+              <label for="wiki" class="label--right">Wiki</label>
+              <input type="checkbox" name="wiki" id="wiki" class="checkbox" />
+            </div>
+
+            <div class="flex-row">
+              <label for="forum" class="label--right">Forum</label>
+              <input type="checkbox" name="forum" id="forum" class="checkbox" />
+            </div>
+
+            <div class="flex-row">
+              <label for="courses" class="label--right"
+                >Additional Courses</label
+              >
+              <input
+                type="checkbox"
+                name="courses"
+                id="courses"
+                class="courses"
+              />
+            </div>
+          </section>
+
+          <section class="form__textarea">
+            <label for="comments" class="label"
+              >Any comments or suggestions?</label
+            >
+            <textarea
+              name="comments"
+              id="comments"
+              class="textarea__comment"
+              placeholder="Enter your comment here..."
+            ></textarea>
+          </section>
+
+          <button class="btn" type="submit">Submit</button>
+        </form>
+      </main>
+    </div>
   </body>
 </html>
