@@ -1,0 +1,134 @@
+/* base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: aqua;
+  margin: 0;
+}
+
+/* variables */
+:root {
+  --site-width: 90%;
+  --large-font-size: 32px;
+  --font-size: 18px;
+  --label-font-size: 1.125rem;
+  --small-font-size: 0.85rem;
+  --optional-color: #666666;
+  --disabled-color: #444444;
+}
+
+/* site background */
+
+/* header */
+.header {
+  width: var(--site-width);
+  text-align: center;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+.header__title {
+  font-size: var(--large-font-size);
+}
+
+.header__text {
+  font-size: var(--font-size);
+}
+
+/* content */
+.content {
+  width: var(--site-width);
+  margin: 0 auto;
+}
+
+/* form */
+.label {
+  font-size: var(--label-font-size);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.label--right {
+  margin-left: 1rem;
+}
+
+/* optional span */
+.optional {
+  color: var(--optional-color);
+  font-size: var(--small-font-size);
+}
+
+/* form long fields */
+.input--long {
+  margin-bottom: 1.5rem;
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+/* form selects */
+select.input--long {
+  background-color: #ffffff;
+}
+
+.form__select select {
+  color: var(--disabled-color);
+}
+.select option {
+  color: black;
+}
+.select option:first-child {
+  color: var(--disabled-color);
+}
+
+/* textarea */
+.form__textarea .label {
+  margin-top: 2rem;
+}
+
+.textarea__comment {
+  width: 100%;
+  border-radius: 5px;
+  min-height: 120px;
+}
+
+/* form button */
+.btn {
+  width: 100%;
+  background-color: #37af65;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  font-size: 19px;
+}
+
+/* flex row */
+.flex-row {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-top: 0.45rem;
+  font-size: var(--font-size);
+}
+
+/* media queries */
+@media screen and (min-width: 900px) {
+  :root {
+    --site-width: 70%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    --site-width: 50%;
+  }
+}
