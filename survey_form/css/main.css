@@ -162,7 +162,7 @@ select.input--long {
     position: static;
   }
 
-  body {
+  .content-background {
     width: var(--site-width);
     position: relative;
     height: 100%;
@@ -171,7 +171,7 @@ select.input--long {
     background-size: cover;
   }
 
-  body::before {
+  .content-background::before {
     content: '';
     position: absolute;
     top: 0px;
@@ -186,7 +186,7 @@ select.input--long {
     width: var(--site-width);
   }
 
-  body > * {
+  .content-background > * {
     position: relative;
   }
 }
