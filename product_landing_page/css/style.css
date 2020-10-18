@@ -3,8 +3,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #eeeeee;
+  --secondary-color: #dddddd;
+  --accent-color: #ffbb2a;
+  --accent-color-dark: #ffae00;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--primary-color);
 }
 
 a {
@@ -20,8 +28,9 @@ a:hover {
 
 /* wrapper */
 .wrapper {
+  width: 90%;
+  margin: 0 auto;
   max-width: 1100px;
-  padding: 1rem;
 }
 
 /* header */
@@ -30,7 +39,7 @@ a:hover {
   grid-template-rows: repeat(2, 1fr);
   position: sticky;
   top: 0;
-  background-color: white;
+  background-color: var(--primary-color);
   justify-content: center;
 }
 
@@ -56,8 +65,121 @@ a:hover {
   align-items: center;
 }
 
+/* cta */
+.cta {
+  text-align: center;
+}
+
+.cta__text {
+  font-size: 1.3rem;
+}
+
+.cta__input {
+  padding: 0.5rem;
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.8rem;
+}
+
+.btn {
+  background-color: var(--accent-color);
+  border: none;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  display: block;
+  border-radius: 5px;
+}
+
+.cta__btn {
+  font-weight: bold;
+}
+
+.card__btn {
+  margin-top: 1.75rem;
+  font-size: 1.2rem;
+  padding: 0.6rem 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.btn:hover {
+  background-color: var(--accent-color-dark);
+  transition: 1250ms;
+}
+
+/* features section */
+.feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.feature__icon {
+  display: none;
+}
+
 /* how it works section */
 .how-it-works__video {
   width: 100%;
   height: 250px;
+  margin-bottom: 5rem;
+}
+
+/* pricing section */
+.pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--primary-color);
+  width: 70%;
+  border: 1px solid black;
+  margin-bottom: 1rem;
+}
+
+.card__header {
+  background-color: var(--secondary-color);
+  width: 100%;
+  margin-top: 0;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding: 0.7rem;
+}
+
+.card__price {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.card__details {
+  list-style: none;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.card__detail {
+  margin-bottom: 0.6rem;
+}
+
+/* footer */
+.footer {
+  background-color: var(--primary-color);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer .nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
 }
