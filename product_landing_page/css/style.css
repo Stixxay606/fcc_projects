@@ -77,6 +77,7 @@ a:hover {
 .cta__input {
   padding: 0.5rem;
   width: 87%;
+  max-width: 275px;
   display: block;
   margin: 0 auto;
   margin-bottom: 0.8rem;
@@ -141,6 +142,7 @@ a:hover {
 .card {
   background-color: var(--primary-color);
   width: 70%;
+  max-width: 300px;
   border: 1px solid black;
   margin-bottom: 1rem;
 }
@@ -213,4 +215,35 @@ a:hover {
   }
 }
 
-/* @media screen and (min-width:) */
+@media screen and (min-width: 650px) {
+  .header {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .header .nav {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .pricing {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+  }
+  .feature {
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 3rem;
+  }
+  .how-it-works__video {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .how-it-works__video {
+    height: 450px;
+  }
+}
