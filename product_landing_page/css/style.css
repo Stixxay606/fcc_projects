@@ -213,6 +213,10 @@ a:hover {
     display: block;
     margin-right: 1.5rem;
   }
+  .feature__icon:hover {
+    color: var(--accent-color);
+    transition: 1250ms;
+  }
 }
 
 @media screen and (min-width: 650px) {
