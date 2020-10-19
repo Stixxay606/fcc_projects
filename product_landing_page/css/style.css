@@ -121,6 +121,7 @@ a:hover {
 
 .feature__icon {
   display: none;
+  color: var(--accent-color-dark);
 }
 
 /* how it works section */
@@ -185,3 +186,31 @@ a:hover {
   display: flex;
   justify-content: flex-end;
 }
+
+@media screen and (min-width: 300px) {
+  .logo__text {
+    font-size: 1.9rem;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .logo__text {
+    font-size: 2rem;
+  }
+  .feature {
+    text-align: left;
+  }
+  .feature:last-child {
+    margin-bottom: 3rem;
+  }
+  .feature__header {
+    font-size: 1.9rem;
+    margin-bottom: 0;
+  }
+  .feature__icon {
+    display: block;
+    margin-right: 1.5rem;
+  }
+}
+
+/* @media screen and (min-width:) */
