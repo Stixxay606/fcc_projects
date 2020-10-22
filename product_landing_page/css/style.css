@@ -153,10 +153,10 @@ body {
 }
 
 .cta__text {
-  font-size: 1rem;
   margin-bottom: 1rem;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .cta__input {
@@ -182,7 +182,26 @@ body {
 
 .cta-btn {
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 1rem;
+}
+
+/* features section */
+.features {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.feature {
+  margin: 2rem 0;
+  line-height: 1.3;
+}
+
+.feature__header {
+  font-size: 1.5rem;
+}
+
+.feature__icon {
+  display: none;
 }
 
 /* media queries */
