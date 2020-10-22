@@ -19,7 +19,21 @@ body {
   justify-content: space-between;
   padding: 1rem 2rem;
   z-index: 1;
-  background-color: #254dff;
+  background-color: black;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.logo__icon {
+  margin-right: 1rem;
+}
+
+.logo__text {
+  font-size: 1rem;
 }
 
 .header a {
@@ -40,7 +54,7 @@ body {
   right: 0;
   left: 0;
   height: 100vh;
-  background-color: #254dff;
+  background-color: black;
   transform: translateX(100vw);
   transition: transform 0.4s ease-in-out;
 }
