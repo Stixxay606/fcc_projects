@@ -110,7 +110,7 @@ body {
 
 .menu-btn__lines::before,
 .menu-btn__lines::after {
-  content: '';
+  content: "";
   position: absolute;
 }
 
@@ -170,9 +170,14 @@ body {
 .btn {
   padding: 0.3rem 0;
   width: 50%;
-  background-color: #F1C40F;
+  background-color: #f8ce25;
   border: none;
   border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #f0c000;
+  transition: background 0.2s ease-in-out;
 }
 
 .cta-btn {
@@ -199,8 +204,8 @@ body {
     padding: 0 0.5rem;
   }
   .menu-items li a {
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  transition: color 0.3s ease-in-out;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease-in-out;
   }
 }
