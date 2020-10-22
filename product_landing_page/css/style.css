@@ -1,253 +1,148 @@
 /* base styles */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-}
-
-:root {
-  --primary-color: #eeeeee;
-  --secondary-color: #dddddd;
-  --accent-color: #ffbb2a;
-  --accent-color-dark: #ffae00;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--primary-color);
-}
-
-a {
-  text-decoration: none;
-  color: #333333;
-  padding: 0.5rem;
-  display: block;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* wrapper */
-.wrapper {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 1100px;
 }
 
 /* header */
 .header {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  position: sticky;
+  position: fixed;
   top: 0;
-  background-color: var(--primary-color);
-  justify-content: center;
-}
-
-/* logo */
-.logo {
+  left: 0;
+  right: 0;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  z-index: 1;
+  background-color: #254dff;
 }
 
-.logo__icon {
-  margin-right: 0.5rem;
+.header a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
 }
 
 /* header nav */
-.header .nav {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
+.menu-items {
   list-style: none;
-  justify-content: center;
+  display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #254dff;
+  transform: translateX(100vw);
+  transition: transform 0.4s ease-in-out;
 }
 
-/* cta */
-.cta {
-  text-align: center;
+.menu-items.open {
+  transform: translateX(0);
 }
 
-.cta__text {
-  font-size: 1.3rem;
+.menu-items li {
+  width: 100vw;
+  height: 100%;
 }
 
-.cta__input {
-  padding: 0.5rem;
-  width: 87%;
-  max-width: 275px;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 0.8rem;
-  border: 1px solid #333333;
-  border-radius: 5px;
-}
-
-.btn {
-  background-color: var(--accent-color);
-  border: none;
-  padding: 0.4rem 1rem;
-  font-size: 1rem;
-  margin: 0 auto;
-  margin-bottom: 4rem;
-  display: block;
-  border-radius: 5px;
-}
-
-.cta__btn {
-  font-weight: bold;
-}
-
-.card__btn {
-  margin-top: 1.75rem;
-  font-size: 1.2rem;
-  padding: 0.6rem 1.2rem;
-  margin-bottom: 0.8rem;
-}
-
-.btn:hover {
-  background-color: var(--accent-color-dark);
-  transition: 1250ms;
-}
-
-/* features section */
-.feature {
+.menu-items li a {
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease-in-out;
+  color: white;
+  font-size: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-}
-
-.feature__icon {
-  display: none;
-  color: var(--accent-color-dark);
-}
-
-/* how it works section */
-.how-it-works__video {
   width: 100%;
-  height: 250px;
-  margin-bottom: 5rem;
+  height: 100%;
 }
 
-/* pricing section */
-.pricing {
+.menu-items li a:hover {
+  color: #cccccc;
+  text-decoration: underline;
+}
+
+.menu-btn {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  z-index: 1;
 }
 
-.card {
-  background-color: var(--primary-color);
-  width: 70%;
-  max-width: 300px;
-  border: 1px solid black;
-  margin-bottom: 1rem;
+/* create menu icon */
+.menu-btn__lines,
+.menu-btn__lines::before,
+.menu-btn__lines::after {
+  width: 1.5rem;
+  height: 0.1rem;
+  background-color: white;
+  transition: all 0.5s ease-in-out;
 }
 
-.card__header {
-  background-color: var(--secondary-color);
-  width: 100%;
-  margin-top: 0;
-  text-align: center;
-  font-weight: 500;
-  font-size: 1.5rem;
-  padding: 0.7rem;
+.menu-btn__lines::before,
+.menu-btn__lines::after {
+  content: '';
+  position: absolute;
 }
 
-.card__price {
-  text-align: center;
-  font-size: 1.4rem;
+.menu-btn__lines::before {
+  transform: translateY(-0.5rem);
 }
 
-.card__details {
-  list-style: none;
-  padding: 0 2rem;
-  text-align: center;
+.menu-btn__lines::after {
+  transform: translateY(0.5rem);
 }
 
-.card__detail {
-  margin-bottom: 0.6rem;
+/* menu animation */
+.menu-btn.open .menu-btn__lines {
+  transform: translateX(2rem);
+  background-color: transparent;
 }
 
-/* footer */
-.footer {
-  background-color: var(--primary-color);
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+.menu-btn.open .menu-btn__lines::before {
+  transform: rotate(45deg) translate(-1.5rem, 1.5rem);
+  background-color: white;
 }
 
-.footer .nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: flex-end;
+.menu-btn.open .menu-btn__lines::after {
+  transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
+  background-color: white;
 }
 
-@media screen and (min-width: 300px) {
-  .logo__text {
-    font-size: 1.9rem;
-  }
-}
-
-@media screen and (min-width: 550px) {
-  .logo__text {
-    font-size: 2rem;
-  }
-  .feature {
-    text-align: left;
-  }
-  .feature:last-child {
-    margin-bottom: 3rem;
-  }
-  .feature__header {
-    font-size: 1.9rem;
-    margin-bottom: 0;
-  }
-  .feature__icon {
-    display: block;
-    margin-right: 1.5rem;
-  }
-  .feature__icon:hover {
-    color: var(--accent-color);
-    transition: 1250ms;
-  }
-}
-
-@media screen and (min-width: 650px) {
-  .header {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-  }
-  .header .nav {
-    flex-direction: row;
-  }
-}
-
+/* media queries */
 @media screen and (min-width: 800px) {
-  .pricing {
+  .header {
+    align-items: center;
+  }
+  .menu-btn {
+    display: none;
+  }
+  .menu-items {
+    transform: translateX(0);
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 5%;
+    height: 100%;
+    position: static;
   }
-  .feature {
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 3rem;
+  .menu-items li {
+    width: unset;
+    padding: 0 0.5rem;
   }
-  .how-it-works__video {
-    height: 300px;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .how-it-works__video {
-    height: 450px;
+  .menu-items li a {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease-in-out;
   }
 }
