@@ -1,37 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/2b0037c0f1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Product Landing Page</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://kit.fontawesome.com/2b0037c0f1.js" crossorigin="anonymous"></script>
-  <script src="js/script.js" defer></script>
-  <link rel="stylesheet" href="css/style.css" />
-  <title>Product Landing Page</title>
-</head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <i class="fas fa-guitar fa-2x logo__icon"></i>
+        <h1 class="logo__text">Custom Guitars</h1>
+      </div>
+      <div class="menu-btn">
+        <div class="menu-btn__lines"></div>
+      </div>
+      <ul class="menu-items">
+        <li><a href="#features" class="menu-item">Features</a></li>
+        <li><a href="#" class="menu-item">Demo</a></li>
+        <li><a href="#" class="menu-item">Pricing</a></li>
+      </ul>
+    </header>
+    <main class="main">
+      <!-- cta section -->
+      <form class="cta">
+        <label for="email" class="cta__text"
+          >Handcrafted, home-made masterpieces</label
+        >
+        <input
+          id="email"
+          class="cta__input"
+          type="email"
+          placeholder="Enter your email address"
+        />
+        <button class="btn cta-btn" type="submit">Get Started</button>
+      </form>
 
-<body>
-  <header class="header">
-    <div class="logo">
-      <i class="fas fa-guitar fa-2x logo__icon"></i>
-      <h1 class="logo__text">Custom Guitars</h1>
-    </div>
-    <div class="menu-btn">
-      <div class="menu-btn__lines"></div>
-    </div>
-    <ul class="menu-items">
-      <li><a href="#" class="menu-item">Features</a></li>
-      <li><a href="#" class="menu-item">Demo</a></li>
-      <li><a href="#" class="menu-item">Pricing</a></li>
-    </ul>
-  </header>
-  <main class="main">
-    <form class="cta">
-      <label for="email" class="cta__text">Handcrafted, home-made masterpieces</label>
-      <input id="email" class="cta__input" type="email" placeholder="Enter your email address">
-      <button class="btn cta-btn" type="submit">Get Started</button>
-    </form>
-  </main>
-</body>
+      <!-- features section -->
+      <section id="features" class="features">
+        <div class="feature">
+          <i class="fas fa-fire feature__icon"></i>
+          <div class="text">
+            <h2 class="feature__header">Premium Materials</h2>
+            <p class="feature__text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus,
+              tenetur?
+            </p>
+          </div>
+        </div>
 
+        <div class="feature">
+          <i class="fas fa-truck feature__icon"></i>
+          <div class="text">
+            <h2 class="feature__header">Fast Shipping</h2>
+            <p class="feature__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate architecto vel dolorum officia ipsa beatae.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <i class="fas fa-ticket-alt feature__icon"></i>
+          <div class="text">
+            <h2 class="feature__header">Quality Assurance</h2>
+            <p class="feature__text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Repellendus at mollitia dignissimos.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
