@@ -205,6 +205,7 @@ body {
 
 .feature__icon {
   display: none;
+  color: #f0c000;
 }
 
 /* demo section */
@@ -295,6 +296,17 @@ body {
 
 /* media queries */
 @media screen and (min-width: 800px) {
+  .pricing {
+    flex-direction: row;
+    gap: 5rem;
+  }
+  .demo__video {
+    height: 350px;
+  }
+}
+
+/* laptops */
+@media screen and (min-width: 1020px) {
   .header {
     align-items: center;
   }
@@ -315,5 +327,34 @@ body {
     font-size: 1rem;
     padding: 0.5rem 1rem;
     transition: color 0.3s ease-in-out;
+  }
+  .features {
+    text-align: unset;
+  }
+  .features div:nth-child(1) {
+    position: relative;
+    right: 140px;
+  }
+  .features div:nth-child(2) {
+    position: relative;
+    right: 10px;
+  }
+  .features div:nth-child(3) {
+    position: relative;
+    right: 65px;
+  }
+  .feature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .feature__icon {
+    display: block;
+    align-self: center;
+    justify-self: right;
+    min-width: 150px;
+  }
+  .demo__video {
+    height: 500px;
   }
 }
