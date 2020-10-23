@@ -166,6 +166,7 @@ body {
   border: 1px solid #444444;
   margin-bottom: 0.6rem;
   width: 90%;
+  max-width: 275px;
 }
 
 .btn {
@@ -184,6 +185,7 @@ body {
 .cta-btn {
   font-weight: bold;
   font-size: 1rem;
+  max-width: 150px;
 }
 
 /* features section */
@@ -228,6 +230,7 @@ body {
 .card {
   margin: 0.8rem 0;
   width: 90%;
+  max-width: 300px;
   background-color: #eeeeee;
   text-align: center;
   border: 1px solid black;
