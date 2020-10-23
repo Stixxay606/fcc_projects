@@ -272,6 +272,17 @@ body {
   list-style-type: none;
 }
 
+.footer-nav-item a {
+  color: #333333;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem;
+}
+
+.footer-nav-item a:hover {
+  text-decoration: underline;
+}
+
 .footer__text {
   margin-top: 0.6rem;
   display: flex;
