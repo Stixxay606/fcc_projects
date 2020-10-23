@@ -206,7 +206,7 @@ body {
 
 /* demo section */
 .demo {
-  margin-top: 5rem;
+  margin: 5rem 0;
   display: flex;
   align-items: center;
 }
@@ -214,6 +214,47 @@ body {
 .demo__video {
   height: 200px;
   width: 100%;
+}
+
+/* pricing section */
+.pricing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  margin: 0.8rem 0;
+  width: 90%;
+  background-color: #cccccc;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.card__header {
+  background-color: #f0c000;
+  padding: 0.3rem;
+}
+
+.card__price {
+  font-size: 1.4rem;
+  margin-top: 0.8rem;
+}
+
+.card__details {
+  list-style: none;
+  padding: 1rem 2rem;
+}
+
+.card__detail {
+  padding: 0.2rem 0;
+}
+
+.card__btn {
+  text-transform: uppercase;
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
 }
 
 /* media queries */
